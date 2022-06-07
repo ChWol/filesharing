@@ -1,0 +1,304 @@
+=================FLAGS==================
+type: cifar10
+batch_size: 56
+epochs: 25
+grad_scale: 1
+seed: 117
+log_interval: 100
+test_interval: 1
+logdir: /home/chwolters/Thesis/Training_pytorch/log/default/ADCprecision=5/batch_size=56/c2cVari=0.003/cellBit=5/d2dVari=0/decreasing_lr=200,250/detect=0/grad_scale=1/inference=0/max_level=32/nonlinearityLTD=-1.46/nonlinearityLTP=1.75/onoffratio=3/seed=117/subArray=128/t=0/target=0/type=cifar10/v=0/vari=0/wl_activate=8/wl_error=8/wl_grad=5/wl_weight=5
+decreasing_lr: 200,250
+wl_weight: 5
+wl_grad: 5
+wl_activate: 8
+wl_error: 8
+inference: 0
+onoffratio: 3
+cellBit: 5
+subArray: 128
+ADCprecision: 5
+vari: 0
+t: 0
+v: 0
+detect: 0
+target: 0
+nonlinearityLTP: 1.75
+nonlinearityLTD: -1.46
+max_level: 32
+d2dVari: 0
+c2cVari: 0.003
+========================================
+Sequential(
+  (0): QConv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (1): ReLU()
+  (2): QConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (3): ReLU()
+  (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (5): QConv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (6): ReLU()
+  (7): QConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (8): ReLU()
+  (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (10): QConv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (11): ReLU()
+  (12): QConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (13): ReLU()
+  (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+Sequential(
+  (0): QLinear(in_features=8192, out_features=1024, bias=False)
+  (1): ReLU(inplace=True)
+  (2): QLinear(in_features=1024, out_features=10, bias=False)
+)
+decreasing_lr: [200, 250]
+training phase
+Train Epoch: 0 [5600/50000] Loss: 24.270107 Acc: 0.1964 lr: 1.00e+00
+Train Epoch: 0 [11200/50000] Loss: 22.456699 Acc: 0.3214 lr: 1.00e+00
+Train Epoch: 0 [16800/50000] Loss: 22.957899 Acc: 0.2500 lr: 1.00e+00
+Train Epoch: 0 [22400/50000] Loss: 22.525070 Acc: 0.3214 lr: 1.00e+00
+Train Epoch: 0 [28000/50000] Loss: 21.975695 Acc: 0.3393 lr: 1.00e+00
+Train Epoch: 0 [33600/50000] Loss: 22.853195 Acc: 0.2857 lr: 1.00e+00
+Train Epoch: 0 [39200/50000] Loss: 22.145916 Acc: 0.3750 lr: 1.00e+00
+Train Epoch: 0 [44800/50000] Loss: 20.913002 Acc: 0.3929 lr: 1.00e+00
+Elapsed 188.35s, 188.35 s/epoch, 0.21 s/batch, ets 4520.35s
+training phase
+Train Epoch: 1 [5600/50000] Loss: 21.920589 Acc: 0.2857 lr: 1.00e+00
+Train Epoch: 1 [11200/50000] Loss: 21.647110 Acc: 0.3393 lr: 1.00e+00
+Train Epoch: 1 [16800/50000] Loss: 21.670990 Acc: 0.3750 lr: 1.00e+00
+Train Epoch: 1 [22400/50000] Loss: 19.101658 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 1 [28000/50000] Loss: 20.103661 Acc: 0.4107 lr: 1.00e+00
+Train Epoch: 1 [33600/50000] Loss: 21.058807 Acc: 0.3571 lr: 1.00e+00
+Train Epoch: 1 [39200/50000] Loss: 18.359779 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 1 [44800/50000] Loss: 19.381571 Acc: 0.4643 lr: 1.00e+00
+Elapsed 370.46s, 185.23 s/epoch, 0.21 s/batch, ets 4260.32s
+training phase
+Train Epoch: 2 [5600/50000] Loss: 20.109718 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 2 [11200/50000] Loss: 18.466085 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 2 [16800/50000] Loss: 21.282799 Acc: 0.3571 lr: 1.00e+00
+Train Epoch: 2 [22400/50000] Loss: 19.122795 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 2 [28000/50000] Loss: 19.053242 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 2 [33600/50000] Loss: 19.798536 Acc: 0.3929 lr: 1.00e+00
+Train Epoch: 2 [39200/50000] Loss: 19.453611 Acc: 0.4107 lr: 1.00e+00
+Train Epoch: 2 [44800/50000] Loss: 19.475063 Acc: 0.4464 lr: 1.00e+00
+Elapsed 554.04s, 184.68 s/epoch, 0.21 s/batch, ets 4062.98s
+training phase
+Train Epoch: 3 [5600/50000] Loss: 18.573792 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 3 [11200/50000] Loss: 18.044859 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 3 [16800/50000] Loss: 18.360355 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 3 [22400/50000] Loss: 17.992447 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 3 [28000/50000] Loss: 18.179035 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 3 [33600/50000] Loss: 19.431293 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 3 [39200/50000] Loss: 20.202709 Acc: 0.3929 lr: 1.00e+00
+Train Epoch: 3 [44800/50000] Loss: 18.649195 Acc: 0.4464 lr: 1.00e+00
+Elapsed 734.32s, 183.58 s/epoch, 0.21 s/batch, ets 3855.17s
+training phase
+Train Epoch: 4 [5600/50000] Loss: 17.563450 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 4 [11200/50000] Loss: 19.368118 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 4 [16800/50000] Loss: 19.279612 Acc: 0.4107 lr: 1.00e+00
+Train Epoch: 4 [22400/50000] Loss: 17.556679 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 4 [28000/50000] Loss: 18.805527 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 4 [33600/50000] Loss: 18.658566 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 4 [39200/50000] Loss: 20.254189 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 4 [44800/50000] Loss: 18.963928 Acc: 0.4643 lr: 1.00e+00
+Elapsed 915.98s, 183.20 s/epoch, 0.21 s/batch, ets 3663.92s
+training phase
+Train Epoch: 5 [5600/50000] Loss: 18.107758 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 5 [11200/50000] Loss: 19.496071 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 5 [16800/50000] Loss: 18.818720 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 5 [22400/50000] Loss: 16.870583 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 5 [28000/50000] Loss: 19.768520 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 5 [33600/50000] Loss: 18.473131 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 5 [39200/50000] Loss: 20.867199 Acc: 0.3393 lr: 1.00e+00
+Train Epoch: 5 [44800/50000] Loss: 19.096054 Acc: 0.5179 lr: 1.00e+00
+Elapsed 1100.49s, 183.42 s/epoch, 0.21 s/batch, ets 3484.89s
+training phase
+Train Epoch: 6 [5600/50000] Loss: 17.070633 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 6 [11200/50000] Loss: 18.840965 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 6 [16800/50000] Loss: 16.589497 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 6 [22400/50000] Loss: 18.159794 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 6 [28000/50000] Loss: 16.546970 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 6 [33600/50000] Loss: 18.573370 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 6 [39200/50000] Loss: 18.477438 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 6 [44800/50000] Loss: 18.102329 Acc: 0.4643 lr: 1.00e+00
+Elapsed 1287.60s, 183.94 s/epoch, 0.21 s/batch, ets 3310.97s
+training phase
+Train Epoch: 7 [5600/50000] Loss: 19.528862 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 7 [11200/50000] Loss: 20.814636 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 7 [16800/50000] Loss: 18.637791 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 7 [22400/50000] Loss: 16.985294 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 7 [28000/50000] Loss: 15.063757 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 7 [33600/50000] Loss: 17.628391 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 7 [39200/50000] Loss: 17.649950 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 7 [44800/50000] Loss: 17.259628 Acc: 0.5357 lr: 1.00e+00
+Elapsed 1468.14s, 183.52 s/epoch, 0.21 s/batch, ets 3119.80s
+training phase
+Train Epoch: 8 [5600/50000] Loss: 16.639200 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 8 [11200/50000] Loss: 16.773247 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 8 [16800/50000] Loss: 18.829342 Acc: 0.4107 lr: 1.00e+00
+Train Epoch: 8 [22400/50000] Loss: 18.396244 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 8 [28000/50000] Loss: 15.717976 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 8 [33600/50000] Loss: 18.787376 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 8 [39200/50000] Loss: 20.031134 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 8 [44800/50000] Loss: 18.241081 Acc: 0.5536 lr: 1.00e+00
+Elapsed 1649.13s, 183.24 s/epoch, 0.21 s/batch, ets 2931.78s
+training phase
+Train Epoch: 9 [5600/50000] Loss: 15.058433 Acc: 0.6607 lr: 1.00e+00
+Train Epoch: 9 [11200/50000] Loss: 16.547720 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 9 [16800/50000] Loss: 18.470751 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 9 [22400/50000] Loss: 14.545626 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 9 [28000/50000] Loss: 17.267982 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 9 [33600/50000] Loss: 16.121048 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 9 [39200/50000] Loss: 17.634039 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 9 [44800/50000] Loss: 15.176548 Acc: 0.6607 lr: 1.00e+00
+Elapsed 1829.58s, 182.96 s/epoch, 0.20 s/batch, ets 2744.37s
+training phase
+Train Epoch: 10 [5600/50000] Loss: 15.337555 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 10 [11200/50000] Loss: 17.062946 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 10 [16800/50000] Loss: 17.885445 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 10 [22400/50000] Loss: 16.615532 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 10 [28000/50000] Loss: 17.046988 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 10 [33600/50000] Loss: 13.805942 Acc: 0.7500 lr: 1.00e+00
+Train Epoch: 10 [39200/50000] Loss: 16.188040 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 10 [44800/50000] Loss: 15.559486 Acc: 0.6071 lr: 1.00e+00
+Elapsed 2011.13s, 182.83 s/epoch, 0.20 s/batch, ets 2559.62s
+training phase
+Train Epoch: 11 [5600/50000] Loss: 15.830349 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 11 [11200/50000] Loss: 13.906407 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 11 [16800/50000] Loss: 17.126202 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 11 [22400/50000] Loss: 19.592852 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 11 [28000/50000] Loss: 15.406639 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 11 [33600/50000] Loss: 16.552917 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 11 [39200/50000] Loss: 17.024426 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 11 [44800/50000] Loss: 15.055375 Acc: 0.5714 lr: 1.00e+00
+Elapsed 2192.42s, 182.70 s/epoch, 0.20 s/batch, ets 2375.12s
+training phase
+Train Epoch: 12 [5600/50000] Loss: 16.309530 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 12 [11200/50000] Loss: 18.952379 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 12 [16800/50000] Loss: 16.470171 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 12 [22400/50000] Loss: 17.388130 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 12 [28000/50000] Loss: 15.838777 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 12 [33600/50000] Loss: 17.151094 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 12 [39200/50000] Loss: 18.011751 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 12 [44800/50000] Loss: 17.793453 Acc: 0.5714 lr: 1.00e+00
+Elapsed 2372.94s, 182.53 s/epoch, 0.20 s/batch, ets 2190.41s
+training phase
+Train Epoch: 13 [5600/50000] Loss: 15.518595 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 13 [11200/50000] Loss: 14.534183 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 13 [16800/50000] Loss: 17.529079 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 13 [22400/50000] Loss: 15.886761 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 13 [28000/50000] Loss: 15.847329 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 13 [33600/50000] Loss: 17.643950 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 13 [39200/50000] Loss: 17.824303 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 13 [44800/50000] Loss: 19.503696 Acc: 0.4643 lr: 1.00e+00
+Elapsed 2554.22s, 182.44 s/epoch, 0.20 s/batch, ets 2006.89s
+training phase
+Train Epoch: 14 [5600/50000] Loss: 18.897079 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 14 [11200/50000] Loss: 17.386665 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 14 [16800/50000] Loss: 15.758375 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 14 [22400/50000] Loss: 15.145199 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 14 [28000/50000] Loss: 17.901087 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 14 [33600/50000] Loss: 15.738930 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 14 [39200/50000] Loss: 16.669291 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 14 [44800/50000] Loss: 18.805447 Acc: 0.5179 lr: 1.00e+00
+Elapsed 2736.96s, 182.46 s/epoch, 0.20 s/batch, ets 1824.64s
+training phase
+Train Epoch: 15 [5600/50000] Loss: 17.472378 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 15 [11200/50000] Loss: 17.352625 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 15 [16800/50000] Loss: 19.262423 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 15 [22400/50000] Loss: 18.318695 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 15 [28000/50000] Loss: 17.556654 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 15 [33600/50000] Loss: 14.183706 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 15 [39200/50000] Loss: 17.300091 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 15 [44800/50000] Loss: 17.581818 Acc: 0.5357 lr: 1.00e+00
+Elapsed 2919.33s, 182.46 s/epoch, 0.20 s/batch, ets 1642.13s
+training phase
+Train Epoch: 16 [5600/50000] Loss: 16.224527 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 16 [11200/50000] Loss: 18.169914 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 16 [16800/50000] Loss: 15.914481 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 16 [22400/50000] Loss: 15.906728 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 16 [28000/50000] Loss: 17.104134 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 16 [33600/50000] Loss: 17.298063 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 16 [39200/50000] Loss: 16.342344 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 16 [44800/50000] Loss: 21.006210 Acc: 0.3929 lr: 1.00e+00
+Elapsed 3101.78s, 182.46 s/epoch, 0.20 s/batch, ets 1459.66s
+training phase
+Train Epoch: 17 [5600/50000] Loss: 15.545135 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 17 [11200/50000] Loss: 16.068945 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 17 [16800/50000] Loss: 16.366438 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 17 [22400/50000] Loss: 16.794498 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 17 [28000/50000] Loss: 16.395454 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 17 [33600/50000] Loss: 14.203411 Acc: 0.6607 lr: 1.00e+00
+Train Epoch: 17 [39200/50000] Loss: 15.430010 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 17 [44800/50000] Loss: 19.445591 Acc: 0.4643 lr: 1.00e+00
+Elapsed 3284.11s, 182.45 s/epoch, 0.20 s/batch, ets 1277.15s
+training phase
+Train Epoch: 18 [5600/50000] Loss: 19.619926 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 18 [11200/50000] Loss: 18.493658 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 18 [16800/50000] Loss: 17.674412 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 18 [22400/50000] Loss: 15.639885 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 18 [28000/50000] Loss: 17.569700 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 18 [33600/50000] Loss: 18.214649 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 18 [39200/50000] Loss: 15.753298 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 18 [44800/50000] Loss: 18.459682 Acc: 0.4643 lr: 1.00e+00
+Elapsed 3466.32s, 182.44 s/epoch, 0.20 s/batch, ets 1094.63s
+training phase
+Train Epoch: 19 [5600/50000] Loss: 19.348431 Acc: 0.3393 lr: 1.00e+00
+Train Epoch: 19 [11200/50000] Loss: 17.585505 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 19 [16800/50000] Loss: 16.372429 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 19 [22400/50000] Loss: 17.618639 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 19 [28000/50000] Loss: 18.072321 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 19 [33600/50000] Loss: 17.276283 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 19 [39200/50000] Loss: 14.901989 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 19 [44800/50000] Loss: 16.721106 Acc: 0.5536 lr: 1.00e+00
+Elapsed 3649.08s, 182.45 s/epoch, 0.20 s/batch, ets 912.27s
+training phase
+Train Epoch: 20 [5600/50000] Loss: 15.036543 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 20 [11200/50000] Loss: 16.502647 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 20 [16800/50000] Loss: 18.662779 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 20 [22400/50000] Loss: 16.262451 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 20 [28000/50000] Loss: 15.710484 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 20 [33600/50000] Loss: 15.098005 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 20 [39200/50000] Loss: 16.843924 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 20 [44800/50000] Loss: 18.005093 Acc: 0.5357 lr: 1.00e+00
+Elapsed 3831.24s, 182.44 s/epoch, 0.20 s/batch, ets 729.76s
+training phase
+Train Epoch: 21 [5600/50000] Loss: 17.092896 Acc: 0.5893 lr: 1.00e+00
+Train Epoch: 21 [11200/50000] Loss: 16.233826 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 21 [16800/50000] Loss: 15.651805 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 21 [22400/50000] Loss: 19.200993 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 21 [28000/50000] Loss: 16.921736 Acc: 0.5714 lr: 1.00e+00
+Train Epoch: 21 [33600/50000] Loss: 18.890060 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 21 [39200/50000] Loss: 19.749729 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 21 [44800/50000] Loss: 15.731701 Acc: 0.5893 lr: 1.00e+00
+Elapsed 4013.45s, 182.43 s/epoch, 0.20 s/batch, ets 547.29s
+training phase
+Train Epoch: 22 [5600/50000] Loss: 19.214909 Acc: 0.4821 lr: 1.00e+00
+Train Epoch: 22 [11200/50000] Loss: 16.676701 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 22 [16800/50000] Loss: 18.165115 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 22 [22400/50000] Loss: 16.829155 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 22 [28000/50000] Loss: 17.895920 Acc: 0.4643 lr: 1.00e+00
+Train Epoch: 22 [33600/50000] Loss: 21.123363 Acc: 0.3929 lr: 1.00e+00
+Train Epoch: 22 [39200/50000] Loss: 19.530432 Acc: 0.4107 lr: 1.00e+00
+Train Epoch: 22 [44800/50000] Loss: 15.665597 Acc: 0.6071 lr: 1.00e+00
+Elapsed 4196.06s, 182.44 s/epoch, 0.20 s/batch, ets 364.88s
+training phase
+Train Epoch: 23 [5600/50000] Loss: 18.988491 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 23 [11200/50000] Loss: 19.460358 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 23 [16800/50000] Loss: 15.301860 Acc: 0.6250 lr: 1.00e+00
+Train Epoch: 23 [22400/50000] Loss: 16.579895 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 23 [28000/50000] Loss: 16.592888 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 23 [33600/50000] Loss: 19.984367 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 23 [39200/50000] Loss: 16.482716 Acc: 0.5536 lr: 1.00e+00
+Train Epoch: 23 [44800/50000] Loss: 15.072890 Acc: 0.5179 lr: 1.00e+00
+Elapsed 4378.32s, 182.43 s/epoch, 0.20 s/batch, ets 182.43s
+training phase
+Train Epoch: 24 [5600/50000] Loss: 18.016138 Acc: 0.4464 lr: 1.00e+00
+Train Epoch: 24 [11200/50000] Loss: 17.134071 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 24 [16800/50000] Loss: 19.578640 Acc: 0.4286 lr: 1.00e+00
+Train Epoch: 24 [22400/50000] Loss: 13.941304 Acc: 0.6429 lr: 1.00e+00
+Train Epoch: 24 [28000/50000] Loss: 14.510651 Acc: 0.6071 lr: 1.00e+00
+Train Epoch: 24 [33600/50000] Loss: 18.656096 Acc: 0.5179 lr: 1.00e+00
+Train Epoch: 24 [39200/50000] Loss: 17.012562 Acc: 0.5357 lr: 1.00e+00
+Train Epoch: 24 [44800/50000] Loss: 16.110748 Acc: 0.5714 lr: 1.00e+00
+Elapsed 4561.23s, 182.45 s/epoch, 0.20 s/batch, ets 0.00s
+Total Elapse: 4567.70, Best Result: 0.000%

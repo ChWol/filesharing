@@ -1,0 +1,87 @@
+=================FLAGS==================
+type: cifar10
+batch_size: 128
+epochs: 6
+grad_scale: 1
+seed: 117
+log_interval: 100
+test_interval: 1
+logdir: /home/chwolters/Thesis/Training_pytorch/log/default/ADCprecision=5/batch_size=128/c2cVari=0.003/cellBit=5/d2dVari=0/decreasing_lr=200,250/detect=0/grad_scale=1/inference=0/max_level=32/nonlinearityLTD=-1.46/nonlinearityLTP=1.75/onoffratio=10/seed=117/subArray=128/t=0/target=0/type=cifar10/v=0/vari=0/wl_activate=8/wl_error=8/wl_grad=5/wl_weight=5
+decreasing_lr: 200,250
+wl_weight: 5
+wl_grad: 5
+wl_activate: 8
+wl_error: 8
+inference: 0
+onoffratio: 10
+cellBit: 5
+subArray: 128
+ADCprecision: 5
+vari: 0
+t: 0
+v: 0
+detect: 0
+target: 0
+nonlinearityLTP: 1.75
+nonlinearityLTD: -1.46
+max_level: 32
+d2dVari: 0
+c2cVari: 0.003
+========================================
+Sequential(
+  (0): QConv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (1): ReLU()
+  (2): QConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (3): ReLU()
+  (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (5): QConv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (6): ReLU()
+  (7): QConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (8): ReLU()
+  (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (10): QConv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (11): ReLU()
+  (12): QConv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (13): ReLU()
+  (14): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+Sequential(
+  (0): QLinear(in_features=8192, out_features=1024, bias=False)
+  (1): ReLU(inplace=True)
+  (2): QLinear(in_features=1024, out_features=10, bias=False)
+)
+decreasing_lr: [200, 250]
+training phase
+Train Epoch: 0 [12800/50000] Loss: 52.644878 Acc: 0.3438 lr: 1.00e+00
+Train Epoch: 0 [25600/50000] Loss: 53.415916 Acc: 0.2422 lr: 1.00e+00
+Train Epoch: 0 [38400/50000] Loss: 50.061382 Acc: 0.3672 lr: 1.00e+00
+Elapsed 125.77s, 125.77 s/epoch, 0.32 s/batch, ets 628.84s
+training phase
+Train Epoch: 1 [12800/50000] Loss: 50.010818 Acc: 0.3750 lr: 1.00e+00
+Train Epoch: 1 [25600/50000] Loss: 45.207748 Acc: 0.4141 lr: 1.00e+00
+Train Epoch: 1 [38400/50000] Loss: 45.208443 Acc: 0.4062 lr: 1.00e+00
+Elapsed 248.52s, 124.26 s/epoch, 0.32 s/batch, ets 497.05s
+training phase
+Train Epoch: 2 [12800/50000] Loss: 46.109154 Acc: 0.4141 lr: 1.00e+00
+Train Epoch: 2 [25600/50000] Loss: 43.541809 Acc: 0.4766 lr: 1.00e+00
+Train Epoch: 2 [38400/50000] Loss: 39.678520 Acc: 0.5234 lr: 1.00e+00
+Elapsed 368.26s, 122.75 s/epoch, 0.31 s/batch, ets 368.26s
+training phase
+Train Epoch: 3 [12800/50000] Loss: 38.338997 Acc: 0.5781 lr: 1.00e+00
+Train Epoch: 3 [25600/50000] Loss: 36.989056 Acc: 0.5547 lr: 1.00e+00
+Train Epoch: 3 [38400/50000] Loss: 36.417023 Acc: 0.5938 lr: 1.00e+00
+Elapsed 489.81s, 122.45 s/epoch, 0.31 s/batch, ets 244.91s
+training phase
+Train Epoch: 4 [12800/50000] Loss: 40.944344 Acc: 0.5000 lr: 1.00e+00
+Train Epoch: 4 [25600/50000] Loss: 37.121529 Acc: 0.5391 lr: 1.00e+00
+Train Epoch: 4 [38400/50000] Loss: 42.143822 Acc: 0.4922 lr: 1.00e+00
+Elapsed 608.84s, 121.77 s/epoch, 0.31 s/batch, ets 121.77s
+training phase
+Train Epoch: 5 [12800/50000] Loss: 42.081863 Acc: 0.4531 lr: 1.00e+00
+Train Epoch: 5 [25600/50000] Loss: 35.678543 Acc: 0.5859 lr: 1.00e+00
+Train Epoch: 5 [38400/50000] Loss: 36.013676 Acc: 0.6406 lr: 1.00e+00
+Elapsed 728.60s, 121.43 s/epoch, 0.31 s/batch, ets 0.00s
+testing phase
+	Epoch 5 Test set: Average loss: 35.9629, Accuracy: 5719/10000 (57%)
+Saving model to /home/chwolters/Thesis/Training_pytorch/log/default/ADCprecision=5/batch_size=128/c2cVari=0.003/cellBit=5/d2dVari=0/decreasing_lr=200,250/detect=0/grad_scale=1/inference=0/max_level=32/nonlinearityLTD=-1.46/nonlinearityLTP=1.75/onoffratio=10/seed=117/subArray=128/t=0/target=0/type=cifar10/v=0/vari=0/wl_activate=8/wl_error=8/wl_grad=5/wl_weight=5/best-5.pth
+Total Elapse: 775.96, Best Result: 57.190%
